@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Engine.ViewModels;
+using System.Media;
 
 namespace WPFUI
 {
@@ -25,6 +26,36 @@ namespace WPFUI
             _gameSession = new GameSession();
 
             DataContext = _gameSession;
+        }
+        private void OnClick_MoveNorth(object sender, RoutedEventArgs e)
+        {
+            _gameSession.MoveNorth();
+        }
+        private void OnClick_MoveWest(object sender, RoutedEventArgs e)
+        {
+            _gameSession.MoveWest();
+        }
+        private void OnClick_MoveEast(object sender, RoutedEventArgs e)
+        {
+            _gameSession.MoveEast();
+        }
+        private void OnClick_MoveSouth(object sender, RoutedEventArgs e)
+        {
+            _gameSession.MoveSouth();
+        }
+        //Some additional xD
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            _gameSession.CurrentPlayer.ExperiencePoints = _gameSession.CurrentPlayer.ExperiencePoints + 10;
+        }
+        SoundPlayer _soundPlayer = new SoundPlayer(@"C:\cc3-1b-millandj\SOSCSRPG\WPFUI\Music\AMV - Berserk - Forces.wav");
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            _soundPlayer.Play();
+        }
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            _soundPlayer.Stop();
         }
     }
 }
