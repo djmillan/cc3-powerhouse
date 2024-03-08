@@ -7,7 +7,6 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
         FontSize="11pt"
-        FontFamily="Fette National Fraktur Bold"
         Title="MainWindow" Height="768" Width="1024">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
