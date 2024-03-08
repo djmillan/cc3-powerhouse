@@ -7,10 +7,13 @@ using Engine.Models;
 
 namespace Engine.Factories
 {
-    internal class WorldFactory
+    //Static Class
+    internal static class WorldFactory
     {
-        internal World CreateWorld()
+        //Static Method
+        internal static World CreateWorld()
         {
+            //Instantiate World and create the World locations
             World newWorld = new World();
             newWorld.AddLocation(-2, -1, "Farmer's Field", 
                 "There are rows of corn growning here, with giant rats hiding between them.", 
