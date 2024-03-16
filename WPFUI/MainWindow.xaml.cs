@@ -43,8 +43,28 @@ namespace WPFUI
         {
             _gameSession.MoveSouth();
         }
-        //Some additional xD
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        private void AttackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // attack
+        }
+
+        private void InteractButton_Click(object sender, RoutedEventArgs e)
+        {
+            // interact
+        }
+
+        private void InventoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            // inventory
+        }
+
+        private void RunButton_Click(object sender, RoutedEventArgs e)
+        {
+            // run
+        }
+
+//Some additional xD
+private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             _gameSession.CurrentPlayer.ExperiencePoints = _gameSession.CurrentPlayer.ExperiencePoints + 10;
         }

@@ -108,5 +108,27 @@ namespace Engine.ViewModels
             }
 
         }
+
+        // command
+        public void Attack()
+        {
+            // attack
+        }
+
+        public void Interact()
+        {
+            // interact
+        }
+
+        public void OpenInventory()
+        {
+            // inventory
+        }
+
+        public void Run()
+        {
+            // run
+        }
     }
 }
+

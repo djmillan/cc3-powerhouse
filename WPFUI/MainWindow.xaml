@@ -128,7 +128,15 @@
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="475"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="1" Grid.Column="1" Background="#22272e" Foreground="White"/>
+            <Label Grid.Row="0" Grid.Column="0" Background="#22272e" Foreground="White" Content="Commands"/>
+            <Grid RenderTransformOrigin="0.5,0.5" Margin="67,56,68,338" Grid.Row="1">
+
+                <Button Content="Attack" Click="AttackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0"/>
+                <Button Content="Interact" Click="InteractButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,20,0,0"/>
+                <Button Content="Use Inventory" Click="InventoryButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,20,0,0"/>
+                <Button Content="Run" Click="RunButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,20,0,0"/>
+
+            </Grid>
         </Grid>
 
         <!-- Map -->
