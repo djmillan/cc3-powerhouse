@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -16,9 +16,7 @@
     <None Remove="Images\Locations\TownGate.png" />
     <None Remove="Images\Locations\TownSquare.png" />
     <None Remove="Images\Locations\Trader.png" />
-  </ItemGroup>
 
-  <ItemGroup>
     <Resource Include="Images\Locations\FarmFields.png" />
     <Resource Include="Images\Locations\Farmhouse.png" />
     <Resource Include="Images\Locations\HerbalistsGarden.png" />
