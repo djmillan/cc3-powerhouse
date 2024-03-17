@@ -1,10 +1,13 @@
 using System.Windows;
 
 [assembly: ThemeInfo(
-    ResourceDictionaryLocation.None,            //where theme specific resource dictionaries are located
-                                                //(used if a resource is not found in the page,
-                                                // or application resource dictionaries)
-    ResourceDictionaryLocation.SourceAssembly   //where the generic resource dictionary is located
-                                                //(used if a resource is not found in the page,
-                                                // app, or any theme specific resource dictionaries)
+    ResourceDictionaryLocation.SourceAssembly, // look for generic resources in the calling assembly
+    ResourceDictionaryLocation.SourceAssembly // look for theme-specific resources in the calling assembly
 )]
+
+// Alternatively, you can use the following code to look for theme-specific resources in a subfolder of the calling assembly
+// [assembly: ThemeInfo(
+//     ResourceDictionaryLocation.SourceAssembly, // look for generic resources in the calling assembly
+//     ResourceDictionaryLocation.Subfolder
+// )]
+
