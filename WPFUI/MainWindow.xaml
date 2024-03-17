@@ -128,12 +128,12 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Row="1" Background="#22272e" Foreground="White" />
-                <Label Grid.Row="2" Content="Name:" Background="#22272e" Foreground="White" />
-                <Label Grid.Row="3" Content="Character Class:" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="4" Content="Hitpoint:" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="5" Content="Gold:" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="6" Content="ExperiencePoints:" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="7" Content="Level:" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="2" Content="Leather Hood:" Background="#22272e" Foreground="White" />
+                <Label Grid.Row="3" Content="Wizard Boots:" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="4" Content="Snipers Chestplate::" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="5" Content="Golden Dagger:" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="6" Content="Shield:" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="7" Content="Iron Sword:" Background="#22272e" Foreground="White"/>
                 <Label Grid.Row="8" Background="#22272e" Foreground="White"/>
                 <Label Grid.Row="9" Background="#22272e" Foreground="White" />
 
