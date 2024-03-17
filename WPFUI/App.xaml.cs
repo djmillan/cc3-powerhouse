@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+using System;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 
@@ -9,6 +10,16 @@ namespace WPFUI
     /// </summary>
     public partial class App : Application
     {
-    }
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            // Add any startup logic here
+            base.OnStartup(e);
+        }
 
+        protected override void OnExit(ExitEventArgs e)
+        {
+            // Add any cleanup logic here
+            base.OnExit(e);
+        }
+    }
 }
