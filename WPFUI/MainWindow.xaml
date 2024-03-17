@@ -138,12 +138,12 @@
                 <Label Grid.Row="9" Background="#22272e" Foreground="White" />
 
                 <Label Grid.Row="1" Grid.Column="1" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.Name}" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.CharacterClass}" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.HitPoints}" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="6" Grid.Column="1" Content="{Binding CurrentPlayer.ExperiencePoints}" Background="#22272e" Foreground="White"/>
-                <Label Grid.Row="7" Grid.Column="1"  Content="{Binding CurrentPlayer.Level}" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="2" Grid.Column="1" Content="2" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="3" Grid.Column="1" Content="4" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="4" Grid.Column="1" Content="6" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="5" Grid.Column="1" Content="8" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="6" Grid.Column="1" Content="10" Background="#22272e" Foreground="White"/>
+                <Label Grid.Row="7" Grid.Column="1"  Content="12" Background="#22272e" Foreground="White"/>
                 <Label Grid.Row="8" Grid.Column="1" Background="#22272e" Foreground="White"/>
                 <Label Grid.Row="9" Grid.Column="1" Background="#22272e" Foreground="White"/>
 
