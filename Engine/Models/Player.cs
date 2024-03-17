@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace Engine.Models
 {
-    public class Player : BaseNotificationClass
+    public class Player : INotifyPropertyChanged
     {
         private string _name;
         private string _characterClass;
@@ -15,57 +11,71 @@ namespace Engine.Models
         private int _experiencePoints;
         private int _level;
         private int _gold;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         public string Name
         {
-            get { return _name; }
-            set {
+            get => _name;
+            set
+            {
                 _name = value;
-                OnPropertyChanged(nameof(Name));
+                OnPropertyChanged();
             }
         }
+
         public string CharacterClass
         {
-            get { return _characterClass; }
+            get => _characterClass;
             set
             {
                 _characterClass = value;
-                OnPropertyChanged(nameof(CharacterClass));
+                OnPropertyChanged();
             }
         }
+
         public int HitPoints
         {
-            get { return _hitPoints; }
+            get => _hitPoints;
             set
             {
                 _hitPoints = value;
-                OnPropertyChanged(nameof(HitPoints));
+                OnPropertyChanged();
             }
         }
-        public int ExperiencePoints 
-        { 
-            get { return _experiencePoints; }
-            set 
-            {  
+
+        public int ExperiencePoints
+        {
+            get => _experiencePoints;
+            set
+            {
                 _experiencePoints = value;
-                OnPropertyChanged(nameof(ExperiencePoints));
+                OnPropertyChanged();
             }
         }
+
         public int Level
         {
-            get { return _level; }
+            get => _level;
             set
             {
                 _level = value;
-                OnPropertyChanged(nameof(Level));
+                OnPropertyChanged();
             }
         }
+
         public int Gold
         {
-            get { return _gold; }
+            get => _gold;
             set
             {
                 _gold = value;
-                OnPropertyChanged(nameof(Gold));
+                OnPropertyChanged();
             }
         }
     }
