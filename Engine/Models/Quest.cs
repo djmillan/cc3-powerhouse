@@ -16,6 +16,6 @@ namespace Engine.Models
 		public int RewardGold { get; set; }
         public List<ItemQuantity> ItemsToComplete { get; set; }
 
-		public Quest ()
+		public Quest (int id, string name, string description, List<ItemQuantity>)
     }
 }
