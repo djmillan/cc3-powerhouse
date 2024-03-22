@@ -14,7 +14,7 @@ namespace Engine.Models
 		public string Image { get; set; }
 		public bool IsUnique { get; set; }
 
-		public GameItem(int itemTypeId, string name, int price, string image, bool isUnique = false)
+		public GameItem(int itemTypeId, string name, string price, string image, bool isUnique = false)
 		{
 			ItemTypeId = itemTypeId;
 			Name = name;
