@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Task;
 using Engine.Models;
 
 namespace Engine.Models
 {
-	public class Weapon : class GameItem
+	public class Weapon : GameItem
 	{
 		public int MinimumDamage { get; set; }
 		public int MaximumDamage { get; set; }
@@ -19,7 +18,7 @@ namespace Engine.Models
 		}
 		public new Weapon Clone()
 		{
-			return new Weapon (itemTypeId, name, price, image,minimumDamage, maximumDamage)
+			return new Weapon(itemTypeId, name, price, image, minimumDamage, maximumDamage);
 		}
 	}
 }
