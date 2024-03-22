@@ -13,10 +13,5 @@ namespace Engine.Models
 		public  List<ItemQuantity> ItemsToComplete { get; set; }
 		public int RewardExpPoints { get; set; }
 		public int RewardGold { get; set; }
-
-		public Quest (int id, string name, string description, List<ItemQuantity> requiredItem)
-		{
-
-		}
     }
 }
