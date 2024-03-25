@@ -3,9 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://shemas.openxmlformats.org/markup-compatibility/2006"
         Title="Ethereal Reckoning: The Lich's Curse" Height="768" Width="1024">
+    <Window.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid RenderTransformOrigin="0.5,0.5" Margin="0,1,-100,-57">
-
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="500" />
@@ -180,17 +183,17 @@
                 <RowDefinition Height="225"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Background="#22272e" Foreground="White" Content="Commands"/>
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="262"/>
-                <ColumnDefinition Width="262"/>
-            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="262"/>
+                    <ColumnDefinition Width="262"/>
+                </Grid.ColumnDefinitions>
 
-          
+
                 <Button Grid.Column="0" Grid.Row="0" Content="Attack" Click="AttackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="262"/>
                 <Button Grid.Column="0" Grid.Row="1" Content="Interact" Click="InteractButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="262" />
                 <Button Grid.Column="1" Grid.Row="0" Content="Use Inventory" Click="InventoryButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="262" />
@@ -225,12 +228,30 @@
         </Grid>
 
         <!-- Navigation -->
-        <Label Grid.Row="2" Grid.Column="2" Content="Navigation" Background="#2d333b" Foreground="White"/>
+        <Label Grid.Row="2" Grid.Column="2" Content="Map" Background="#2d333b" Foreground="White"/>
         <Grid Grid.Row="2" Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="225"/>
             </Grid.RowDefinitions>
+            <Label Grid.Row="1" Background="#22272e"/>
+            <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="1" Height="25" Width="65" Margin="10" Click="OnClick_MoveNorth" Visibility="{Binding HasLocationToNorth, Converter={StaticResource BooleanToVisibility}}" Content="North"/>
+                    <Button Grid.Row="1" Grid.Column="2" Height="25" Width="65" Margin="10" Click="OnClick_MoveEast" Visibility="{Binding HasLocationToEast, Converter={StaticResource BooleanToVisibility}}" Content="East"/>
+                    <Button Grid.Row="1" Grid.Column="0" Height="25" Width="65" Margin="10" Click="OnClick_MoveWest" Visibility="{Binding HasLocationToWest, Converter={StaticResource BooleanToVisibility}}" Content="West"/>
+                    <Button Grid.Row="2" Grid.Column="1" Height="25" Width="65" Margin="10" Click="OnClick_MoveSouth" Visibility="{Binding HasLocationToSouth, Converter={StaticResource BooleanToVisibility}}" Content="South"/>
+                </Grid>
         </Grid>
     </Grid>
 </Window>
