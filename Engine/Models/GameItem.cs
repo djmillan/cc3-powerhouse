@@ -8,19 +8,19 @@ namespace Engine.Models
 {
 	public class GameItem
 	{
-		public int ItemTypeId { get; set; }
-		public string Name { get; set; }
-		public string Price { get; set; }
-		public string Image { get; set; }
-		public bool IsUnique { get; set; }
+		public int ItemTypeId;
+		public string Name;
+		public int Price;
+		public string Image;
+		public bool IsUnique;
 
 		public GameItem(int itemTypeId, string name, int price, string image, bool isUnique = false)
 		{
-			ItemTypeId = itemTypeId;
-			Name = name;
-			Price = price;
-			Image = image;
-			IsUnique = isUnique;
+            itemTypeId = ItemTypeId;
+			name = Name;
+			price = Price;
+			image = Image;
+			isUnique = IsUnique;
 		}
 
 		public GameItem Clone()

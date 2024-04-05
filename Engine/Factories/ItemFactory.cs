@@ -10,7 +10,7 @@ namespace Engine.Factories
 {
 	public static class ItemFactory
 	{
-		private static List<GameItem> _standardGameItems = new List<GameItem>();
+		private static List<GameItem> _standardGameItems;
 		static ItemFactory()
 		{
 			_standardGameItems = new List<GameItem>();
@@ -23,16 +23,14 @@ namespace Engine.Factories
 			_standardGameItems.Add(new GameItem(9004, "Iron Sword", 6, ""));
 			_standardGameItems.Add(new GameItem(9004, "Leather Hood", 2, ""));
 		}
-		public static GameItem CreateGameItem(int itemTypeId)
+		public static GameItem CreateGameItem()
 		{
-			GameItem standardItem = _standardGameItems.FirstOrDefault(standardGameItems => itemTypeId);
-			if (standardItem == null)
+			if (_standardGameItems.Count > 0) 
 			{
-				if(standardItem is Weapon)
+				if(_standardGameItems is Weapon)
 				{
-					return (standardItem as Weapon).Clone();
+					return _standardGameItems [0].Clone();
 				}
-				return standardItem.Clone();
 			}
 			return null;
 		}

@@ -201,6 +201,7 @@
 
             </Grid>
         </Grid>
+		
 
         <!-- Map -->
         <Label Grid.Row="1" Grid.Column="2" Content="Map" Background="#2d333b" Foreground="White"/>
