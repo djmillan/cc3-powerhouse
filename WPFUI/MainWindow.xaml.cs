@@ -63,12 +63,14 @@ namespace WPFUI
             // run
         }
 
-//Some additional xD
-private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        //Extra code
+        /*
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             _gameSession.CurrentPlayer.ExperiencePoints = _gameSession.CurrentPlayer.ExperiencePoints + 10;
         }
-        SoundPlayer _soundPlayer = new SoundPlayer(@"C:\cc3-1b-millandj\SOSCSRPG\WPFUI\Music\AMV - Berserk - Forces.wav");
+        */
+        SoundPlayer _soundPlayer = new SoundPlayer(@"C:\cc3-1b-millandj\SOSCSRPG\WPFUI\Music\Dota Theme Song ｜ Defense Of The Ancients.wav");
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             _soundPlayer.Play();

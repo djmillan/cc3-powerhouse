@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Images\footman.gif" />
     <None Remove="Images\win.jpeg" />
+    <None Remove="Music\Dota Theme Song ｜ Defense Of The Ancients.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +25,7 @@
   <ItemGroup>
     <Resource Include="Images\footman.gif" />
     <Resource Include="Images\win.jpeg" />
+    <Resource Include="Music\Dota Theme Song ｜ Defense Of The Ancients.wav" />
   </ItemGroup>
 
 </Project>

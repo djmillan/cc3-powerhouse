@@ -76,17 +76,17 @@ namespace Engine.Factories
                 "An underground tunnel system full of rats and other entities.",
                 "/Engine;component/Images/Locations/HerbalistsGarden.png");
 
-
-
+            //Creating Quests
             newWorld.LocationAt(0, 1).AvailableQuest.Add(QuestFactory.GetQuestID(1));
             newWorld.LocationAt(-1, 1).AvailableQuest.Add(QuestFactory.GetQuestID(2));
             newWorld.LocationAt(0, -3).AvailableQuest.Add(QuestFactory.GetQuestID(3));
             newWorld.LocationAt(-3, 0).AvailableQuest.Add(QuestFactory.GetQuestID(4));
             newWorld.LocationAt(-3, -1).AvailableQuest.Add(QuestFactory.GetQuestID(4));
 
-
-
-
+            //Monsters and their respective location
+            newWorld.LocationAt(-2, -1).AddMonster(2, 100);
+            newWorld.LocationAt(2, 0).AddMonster(3, 100);
+            newWorld.LocationAt(0, 2).AddMonster(1, 100);
             return newWorld;
         }
     }
