@@ -178,28 +178,26 @@
         <Label Grid.Row="2" Grid.Column="1" Content="Commands:" Background="#2d333b" Foreground="White"/>
         <Grid Grid.Row="2" Grid.Column="1">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="225"/>
-            </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Background="#22272e" Foreground="White" Content="Commands"/>
-            <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="262"/>
-                    <ColumnDefinition Width="262"/>
-                </Grid.ColumnDefinitions>
+            <TabControl>
+                <TabItem Header="Inventory">
+                    <DataGrid ItemsSource="{Binding CurrentPlayer.Inventory}" AutoGenerateColumns="False" HeadersVisibility="Column">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Name}" Width="*"/>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="Auto"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
 
+                <TabItem Header="Quest">
+                    <DataGrid ItemsSource="{Binding CurrentPlayer.Quest}" AutoGenerateColumns="False" HeadersVisibility="Column">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding PlayerQuest.Name}" Width="*"/>
+                            <DataGridTextColumn Header="Done?" Binding="{Binding IsDone}" Width="Auto"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
 
-                <Button Grid.Column="0" Grid.Row="0" Content="Attack" Click="AttackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="262"/>
-                <Button Grid.Column="0" Grid.Row="1" Content="Interact" Click="InteractButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="262" />
-                <Button Grid.Column="1" Grid.Row="0" Content="Use Inventory" Click="InventoryButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="262" />
-                <Button Grid.Column="1" Grid.Row="1" Content="Run" Click="RunButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="262" />
-
-            </Grid>
         </Grid>
 		
 

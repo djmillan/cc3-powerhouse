@@ -16,14 +16,30 @@ namespace Engine.Models
 
 		public GameItem(int itemTypeId, string name, int price, string image, bool isUnique = false)
 		{
-            itemTypeId = ItemTypeId;
-			name = Name;
-			price = Price;
-			image = Image;
-			isUnique = IsUnique;
-		}
+            this.ItemTypeId = itemTypeId;
+            this.Name = name;
+            this.Price = price;
+            this.Image = image;
+            this.IsUnique = isUnique;
 
-		public GameItem Clone()
+		}
+        public GameItem(int itemTypeId, string name, int price, bool isUnique = false)
+        {
+            this.ItemTypeId = itemTypeId;
+            this.Name = name;
+            this.Price = price;
+            this.IsUnique= isUnique;
+
+        }
+        public GameItem(int itemTypeId, string name,string image, bool isUnique = false)
+        {
+            this.ItemTypeId = itemTypeId;
+            this.Name = name;
+            this.Image= image;
+            this.IsUnique = isUnique;
+        }
+
+        public GameItem Clone()
 		{
 			return new GameItem(ItemTypeId, Name, Price, Image, IsUnique);
 		}

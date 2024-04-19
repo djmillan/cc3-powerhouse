@@ -28,7 +28,9 @@ namespace Engine.ViewModels
                 OnPropertyChanged(nameof(HasLocationToWest));
                 OnPropertyChanged(nameof(HasLocationToSouth));
 
+                CompleteQuestsAtLocation();
                 GivePlayerQuestsAtLocation();
+                GetMonsterAtLocation(); 
             }
         }
         public bool HasLocationToNorth
@@ -139,6 +141,42 @@ namespace Engine.ViewModels
                 if(!CurrentPlayer.Quest.Any(q => q.PlayerQuest.ID == quest.ID))
                 {
                     CurrentPlayer.Quest.Add(new QuestStatus(quest));
+                }
+            }
+        }
+        private void CompleteQuestsAtLocation()
+        {
+            foreach(Quest quest in CurrentLocation.AvailableQuest)
+            {
+                QuestStatus questToComplete = CurrentPlayer.Quest.FirstOrDefault(q => q.PlayerQuest.ID == quest.ID && !q.IsDone);
+                if(questToComplete != null)
+                {
+                    if(CurrentPlayer.HasAllTheseItems(quest.ItemsToComplete))
+                    {
+                        foreach (ItemQuantity itemQuantity in quest.ItemsToComplete)
+                        {
+                            for (int i = 0; i < itemQuantity.Quantity; i++) 
+                            {
+                                CurrentPlayer.RemoveItemsFromInventory(CurrentPlayer.Inventory.First(item => item.ItemTypeId == itemQuantity.ItemID));
+
+                            }
+                        }
+                        Console.WriteLine("");
+                        Console.WriteLine($"You completed the'{quest.Name}'quest");
+
+                        CurrentPlayer.ExperiencePoints += quest.RewardExpPoints;
+                        Console.WriteLine($"You recieve{quest.RewardGold} gold");
+
+                        foreach (ItemQuantity itemQuantity in quest.RewardItems)
+                        {
+                            GameItem rewardItem = ItemFactory.CreateGameItem(itemQuantity.ItemID);
+
+                            CurrentPlayer.AddItemToInventory(rewardItem);
+                            Console.WriteLine($" You recieve a {rewardItem.Name}");
+                        }
+                        questToComplete.IsDone = true; 
+
+                    }
                 }
             }
         }
