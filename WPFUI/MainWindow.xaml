@@ -35,9 +35,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Music" Background="#434b55" Foreground="White"/>
+            <Label Grid.Row="0" Grid.Column="0" Content="Press for Music -->" Background="#434b55" Foreground="White"/>
             <Button Grid.Row="0" Grid.Column="1" Content="Start" Click="button1_Click" Background="#434b55" Foreground="White"/>
-            <Button Grid.Row="0" Grid.Column="2" Content="Stop" Click="button2_Click" Background="#434b55" Foreground="White"/>
         </Grid>
         <!-- Area of Player Info -->
         <Grid Grid.Row="1" Grid.Column="0">
